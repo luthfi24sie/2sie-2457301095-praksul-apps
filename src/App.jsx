@@ -1,121 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Link } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Header */}
+      <div className="px-6 md:px-12 pt-12 md:pt-20 pb-8 text-center">
+        <div className="inline-block bg-indigo-100 text-indigo-600 text-xs font-semibold px-4 py-1.5 rounded-full mb-4">
+          Pemrograman Framework Lanjutan
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+        <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-3">
+          Portal Praktikum Susulan
+        </h1>
+        <p className="text-gray-500 text-base md:text-lg font-medium">
+          2SIE &nbsp;|&nbsp; 2457301095 &nbsp;|&nbsp; Luthfi
+        </p>
+      </div>
 
-      <div className="ticks"></div>
+      {/* Card Grid */}
+      <div className="max-w-5xl mx-auto px-6 md:px-12 pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          {/* Pertemuan 4 Card */}
+          <Link
+            to="/pertemuan-4"
+            className="group bg-white rounded-2xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-indigo-200 transition-all p-6 flex flex-col"
+          >
+            <div className="flex items-center justify-between mb-4">
+              <span className="bg-indigo-100 text-indigo-600 text-xs font-bold px-3 py-1 rounded-full">
+                Pertemuan 4
+              </span>
+              <span className="text-gray-300 group-hover:text-indigo-400 transition-colors text-lg">→</span>
+            </div>
+            <h2 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-indigo-700 transition-colors">
+              Pertemuan 4
+            </h2>
+            <p className="text-gray-500 text-sm leading-relaxed flex-1">
+              Data JSON, Search &amp; Filter, Best Practice State, Responsive &amp; Grid Design
+            </p>
+            <div className="mt-5 pt-4 border-t border-gray-100">
+              <span className="text-indigo-600 group-hover:text-indigo-700 text-sm font-semibold transition-colors">
+                Masuk →
+              </span>
+            </div>
+          </Link>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+        </div>
+      </div>
+    </div>
   )
 }
 
